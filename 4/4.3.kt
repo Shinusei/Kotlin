@@ -1,11 +1,10 @@
 fun topKFrequent(words: Array<String>, k: Int): Array<String> {
-    val wordCount = words.groupingBy { it }.eachCount()
-    val sortedWords = wordCount.entries.sortedByDescending { it.value }.sortedByDescending { it.key }
-    return sortedWords.take(k).map { it.key }.toTypedArray()
+    val wordCount = words.groupingBy { it }.eachCount().toList().sortedByDescending { it.second }.toMap()
+    return wordCount.keys.take(k).toTypedArray()
 }
 
 fun main() {
-    val words = arrayOf(readLine().split(" "))
+    val words = arrayOf("the","day","is","sunny","the","the","the","sunny","is","is","day")
     val k = 4
     val result = topKFrequent(words, k)
     println(result.joinToString(", "))
