@@ -5,7 +5,7 @@ fun encodeMorseCode(s: String): String {
         "-.--", "-..-", "..-..", "..--", ".-.-"
     )
     val alphabet = "АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
-    
+
     return s.uppercase().map { char ->
         val index = alphabet.indexOf(char)
         morseCodeArray[index]

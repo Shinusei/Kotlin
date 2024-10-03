@@ -4,7 +4,7 @@ fun topKFrequent(words: Array<String>, k: Int): Array<String> {
 }
 
 fun main() {
-    val words = arrayOf("the","day","is","sunny","the","the","the","sunny","is","is","day")
+    val words = arrayOf("the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is", "day")
     val k = 4
     val result = topKFrequent(words, k)
     println(result.joinToString(", "))
