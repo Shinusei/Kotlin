@@ -32,7 +32,7 @@ class UniqueString() {
 
     fun contains(substring: String): Boolean = contains(substring.toCharArray())
 
-    fun trim(): UniqueString? {
+    fun trim(): UniqueString {
         val startIndex = chars.indexOfFirst { !it.isWhitespace() } ?: 0
         return chars.let { UniqueString(it.copyOfRange(startIndex, chars.size)) }
     }
